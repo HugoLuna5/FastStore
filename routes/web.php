@@ -13,4 +13,12 @@
 
 
 
-Route::get('/', 'ProductosController@index');
+Route::get('/', [
+    'as' => 'inicio',
+    'uses' => 'ProductosController@index'
+]);
+
+Route::get('producto/{idProducto}', [
+    'as' => 'producto-detalle',
+    'uses' => 'ProductosController@show'
+]);
