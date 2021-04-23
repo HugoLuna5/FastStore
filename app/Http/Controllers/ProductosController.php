@@ -16,7 +16,14 @@ class ProductosController extends Controller
     public function show($idProducto){
         $producto =  Producto::find($idProducto);
 
-        return view('tienda.detalles', compact('producto'));
+        if ($producto != null){
+            return view('tienda.detalles', compact('producto'));
+        }
+
+
+        return back();
+
+
     }
 
 }

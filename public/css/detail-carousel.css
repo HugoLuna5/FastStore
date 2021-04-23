@@ -1,0 +1,213 @@
+@media screen and (min-width: 1201px) {
+  /*Monitor Grande*/
+  .carousel-item {
+    height: 90vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  .imageSlide {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+  }
+  .carousel-caption {
+    position: absolute;
+    right: 15%;
+    bottom: 25%;
+    left: 15%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: center;
+  }
+  .containerText {
+    margin: 0;
+    position: absolute; /* 2 */
+    top: 85%; /* 3 */
+    transform: translate(0, -50%);
+  }
+  .shopNameTextSlider {
+    font-size: 30px;
+  }
+
+  .productNameTextSlider {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  /*Pantalla normal o laptop*/
+  .carousel-item {
+    height: 92vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  .imageSlide {
+    width: 85%;
+    display: flex;
+    justify-content: center;
+  }
+  .carousel-caption {
+    position: absolute;
+    right: 15%;
+    bottom: 20%;
+    left: 15%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: center;
+  }
+  .containerText {
+    margin: 0;
+    position: absolute; /* 2 */
+    top: 75%; /* 3 */
+    transform: translate(0, -50%);
+  }
+  .shopNameTextSlider {
+    font-size: 20px;
+  }
+
+  .productNameTextSlider {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  /*Pantalla chica*/
+  .carousel-item {
+    height: 92vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  .imageSlide {
+    width: 85%;
+    display: flex;
+    justify-content: center;
+  }
+  .carousel-caption {
+    position: absolute;
+    right: 15%;
+    bottom: 22%;
+    left: 15%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: center;
+  }
+  .containerText {
+    margin: 0;
+    position: absolute; /* 2 */
+    top: 75%; /* 3 */
+    transform: translate(0, -50%);
+  }
+  .shopNameTextSlider {
+    font-size: 20px;
+  }
+
+  .productNameTextSlider {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /*Tablet*/
+  .carousel-item {
+    height: 92vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  .imageSlide {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .carousel-caption {
+    position: absolute;
+    right: 15%;
+    bottom: 30%;
+    left: 15%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: center;
+  }
+  .containerText {
+    margin: 0;
+    position: absolute; /* 2 */
+    top: 75%; /* 3 */
+    transform: translate(0, -50%);
+  }
+  .shopNameTextSlider {
+    font-size: 18px;
+  }
+
+  .productNameTextSlider {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /*Telefono*/
+  .carousel-item {
+    height: 92vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  .imageSlide {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .carousel-caption {
+    position: absolute;
+    right: 15%;
+    bottom: 25%;
+    left: 15%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: center;
+  }
+  .containerText {
+    margin: 0;
+    position: absolute; /* 2 */
+    top: 75%; /* 3 */
+    transform: translate(0, -50%);
+  }
+  .shopNameTextSlider {
+    font-size: 18px;
+  }
+
+  .productNameTextSlider {
+    font-size: 25px;
+  }
+}
+
+.textContent {
+  text-align: left;
+  color: #000;
+}

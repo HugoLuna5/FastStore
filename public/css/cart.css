@@ -1,0 +1,52 @@
+hr {
+  height: 0.1px;
+  color: #000;
+  background-color: #000;
+}
+.nameItem {
+  font-weight: bolder;
+  font-size: 12px;
+}
+.descItem {
+  font-weight: normal;
+  font-size: 14px;
+}
+.imgTable {
+  width: 20%;
+}
+
+.customList {
+  font-weight: normal;
+  font-size: 14px;
+}
+.customSizeThImage {
+  width: 20%;
+}
+.customSizeThDesc {
+  width: 30%;
+}
+.customBorderTop {
+  border: none !important;
+}
+
+.iconBtn {
+  margin-right: 5px;
+  float: left;
+}
+.cstButton {
+  margin-left: 0;
+}
+@media screen and (min-width: 1201px) {
+  .imgTable {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 480px) {
+}

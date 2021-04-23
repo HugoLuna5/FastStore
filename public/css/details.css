@@ -1,0 +1,52 @@
+.containerDesc {
+  margin-top: 4.5rem !important;
+}
+.containerInfo {
+  margin: 5%;
+}
+.containerProductInfo {
+  margin-top: 4rem;
+}
+.customMarginInfoProduct {
+  margin-left: 10px;
+}
+hr {
+  height: 0.2px;
+  color: #000;
+  background-color: #000;
+}
+
+.customIngredients {
+  list-style-type: none;
+  margin-left: 10px;
+}
+
+.customIngredients li > a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.bt-customCar {
+  background-color: #fbd67d;
+  font-size: 18px;
+  font-weight: bolder;
+}
+.bt-customBuy {
+  background-color: #ff715f;
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+@media screen and (min-width: 1201px) {
+}
+
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 480px) {
+}
