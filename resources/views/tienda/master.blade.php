@@ -7,13 +7,18 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,900" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css"/>
     <title>Fast - @yield('titulo')</title>
     @yield('customCSS')
 </head>
 <body>
 <div id="app">
     @include('tienda.secciones.menu')
+
+    @if(\Session::has('mensaje'))
+        @include('tienda.secciones.mensajes')
+    @endif
+
     @yield('contenido')
     @include('tienda.secciones.footer')
 

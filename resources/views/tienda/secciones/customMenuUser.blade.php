@@ -3,7 +3,7 @@
     <li class="nav-item custom-nav-item dropdown" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <a class="nav-link nav-link-label" href="#">
             {{Auth::user()->name}}
-            <i data-feather="person"></i>
+            
         </a>
 
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">

@@ -18,12 +18,36 @@ class CarController extends Controller
         if (!Session::has('carrito')) Session::put('carrito', array());
     }
 
+
+    public function total(){
+        $carrito = Session::get('carrito');
+        $total = 0;
+        foreach ($carrito as $item){
+            $total += $item->precio * $item->cantidad;
+        }
+
+        return $total;
+    }
+
     public function show()
     {
 
         $productos = Session::get('carrito');
-        return view('tienda.car', compact('productos'));
+        $total = $this->total();
+        return view('tienda.car', compact('productos', 'total'));
     }
+
+    public function detailsOrder()
+    {
+        if (count(Session::get('carrito')) <= 0)
+            return redirect()->route('inicio');
+        $productos = Session::get('carrito');
+        $total = $this->total();
+        return view('tienda.orderDetails', compact('productos', 'total'));
+    }
+
+
+
 
     public function add(Producto $producto)
     {

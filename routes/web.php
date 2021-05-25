@@ -34,6 +34,11 @@ Route::get('/shopping-cart',[
 
 ]);
 
+Route::get('/shopping-cart/order/details',[
+    'as' => 'orderDetails',
+    'uses' => 'CarController@detailsOrder'
+])->middleware('auth');
+
 Route::get('/shopping-cart/add/{producto}',[
     'as' => 'addCar',
     'uses' => 'CarController@add'
@@ -50,6 +55,15 @@ Route::get('/shopping-cart/delete/{producto}',[
     'uses' => 'CarController@delete'
 ]);
 
+Route::get('/shopping-cart/payment',[
+    'as' => 'payment',
+    'uses' => 'PaypalController@postPayment'
+]);
+
+Route::get('/shopping-cart/payment/status',[
+    'as' => 'payment.status',
+    'uses' => 'PaypalController@getPaymentStatus'
+]);
 
 Auth::routes();
 

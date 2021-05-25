@@ -1,6 +1,6 @@
 @extends('tienda.master')
 
-@section('titulo', 'Productos')
+@section('titulo', 'Inicio')
 @section('customCSS')
     <link rel="stylesheet" href="{{asset('/css/main.css')}}"/>
     <link rel="stylesheet" href="{{asset('/css/carousel.css')}}"/>

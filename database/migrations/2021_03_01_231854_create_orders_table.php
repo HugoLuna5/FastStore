@@ -13,10 +13,18 @@ class CreateOrdersTable extends Migration
      */
     public function up()
     {
+
         Schema::create('orders', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->decimal('subtotal', 5,2);
+            $table->decimal('envio', 10,2);
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')
+                ->on('users')
+                ->onDelete('cascade');
             $table->timestamps();
         });
+
     }
 
     /**

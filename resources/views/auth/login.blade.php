@@ -1,4 +1,5 @@
 @extends('tienda.layoutLogin')
+@section('titulo', 'Iniciar sesión')
 @section('customCSS')
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="{{asset('/css/main.css')}}"/>

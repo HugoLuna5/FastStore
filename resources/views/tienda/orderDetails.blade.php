@@ -89,6 +89,16 @@
                                 <td>Gratis</td>
                             </tr>
                             <tr>
+                                <td>DIRECCIÓN</td>
+                                <td>{{Auth::user()->direction}}</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    EMAIL
+                                </td>
+                                <td>{{Auth::user()->email}}</td>
+                            </tr>
+                            <tr>
                                 <td>IVA 16%</td>
                                 <td>%
                                     @php
@@ -120,9 +130,9 @@
                         SEGUIR COMPRANDO
                     </button>
 
-                    <button onclick="location.href = '{{route('orderDetails')}}'" class="btn btn-dark btn-block">
+                    <button onclick="location.href = '{{route('payment')}}'" class="btn btn-dark btn-block">
                         <span class="iconBtn"><i data-feather="credit-card"></i></span>
-                        COMPRAR
+                        PAGAR
                     </button>
 
                 </div>
