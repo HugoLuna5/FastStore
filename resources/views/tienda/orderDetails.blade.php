@@ -10,7 +10,7 @@
         @if(count($productos))
             <div class="row">
                 <div class="col-12">
-                    <h5 class="text-center">Carrito de compra</h5>
+                    <h5 class="text-center">Detalles de la compra</h5>
                     <hr/>
                     <div class="table-responsive">
                         <table class="table">

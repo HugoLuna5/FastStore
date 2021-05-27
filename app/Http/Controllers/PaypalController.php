@@ -44,28 +44,33 @@ class PaypalController extends Controller
 
         $items = array();
         $subtotal = 0;
+        $subtotalIva = 0;
         $carrito = Session::get('carrito');
-        $currency = 'USD';
+        $currency = 'MXN';
 
         foreach ($carrito as $producto) {
             $item = new Item();
+            $ivaItem = $producto->precio * .16;
             $item->setName($producto->nombre)
                 ->setCurrency($currency)
                 ->setDescription($producto->description)
                 ->setQuantity($producto->cantidad)
-                ->setPrice($producto->precio);
+                ->setPrice(($producto->precio + $ivaItem));
             $items[] = $item;
-            $subtotal += $producto->cantidad * $producto->precio;
+            $subtotalIva += $producto->cantidad * $producto->precio;
         }
+        $iva = $subtotalIva * .16;
+        $subtotal = $subtotalIva + $iva;
+
 
         $item_list = new ItemList();
         $item_list->setItems($items);
 
         $details = new Details();
 
-        $details->setSubtotal($subtotal)->setShipping(5);
+        $details->setSubtotal($subtotal)->setShipping(0);
 
-        $total = $subtotal + 5;
+        $total = $subtotal;
 
         $amount = new Amount();
         $amount->setCurrency($currency)

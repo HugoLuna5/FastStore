@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class ProductosController extends Controller
 {
     public function index(){
-        $productos =  Producto::all();
+        $productos =  Producto::orderBy('idproducto', 'desc')->get();
 
         return view('tienda.index', compact('productos'));
     }

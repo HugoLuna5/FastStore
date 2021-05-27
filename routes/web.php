@@ -13,8 +13,22 @@
 
 
 use App\Model\Producto;
+use Illuminate\Support\Facades\Route;
 
-Route::bind('producto', function ($idProducto){
+Route::group(['middleware' => ['auth', 'role:admin']], function () {
+    Route::prefix('admin')->group(function () {
+
+        Route::get('', 'Admin\HomeController@index');
+
+
+        Route::resource('categorias', 'Admin\CategoriasController');
+
+
+    });
+});
+
+
+Route::bind('producto', function ($idProducto) {
     return \App\Model\Producto::find($idProducto);
 });
 
@@ -28,39 +42,39 @@ Route::get('producto/{idproducto}', [
     'uses' => 'ProductosController@show'
 ]);
 
-Route::get('/shopping-cart',[
+Route::get('/shopping-cart', [
     'as' => 'carrito',
     'uses' => 'CarController@show'
 
 ]);
 
-Route::get('/shopping-cart/order/details',[
+Route::get('/shopping-cart/order/details', [
     'as' => 'orderDetails',
     'uses' => 'CarController@detailsOrder'
 ])->middleware('auth');
 
-Route::get('/shopping-cart/add/{producto}',[
+Route::get('/shopping-cart/add/{producto}', [
     'as' => 'addCar',
     'uses' => 'CarController@add'
 
 ]);
 
-Route::get('/shopping-cart/update/{producto}/{cantidad?}',[
+Route::get('/shopping-cart/update/{producto}/{cantidad?}', [
     'as' => 'updateCar',
     'uses' => 'CarController@update'
 ]);
 
-Route::get('/shopping-cart/delete/{producto}',[
+Route::get('/shopping-cart/delete/{producto}', [
     'as' => 'deleteCar',
     'uses' => 'CarController@delete'
 ]);
 
-Route::get('/shopping-cart/payment',[
+Route::get('/shopping-cart/payment', [
     'as' => 'payment',
     'uses' => 'PaypalController@postPayment'
 ]);
 
-Route::get('/shopping-cart/payment/status',[
+Route::get('/shopping-cart/payment/status', [
     'as' => 'payment.status',
     'uses' => 'PaypalController@getPaymentStatus'
 ]);

@@ -19,6 +19,7 @@ class CreateProductosTable extends Migration
             $table->string('codigo', 45);
             $table->text('descripcion');
             $table->text('imagen');
+            $table->string('color');
             $table->decimal('precio', 5,2);
             $table->integer('idestado');
             $table->unsignedBigInteger('idcategoria');

@@ -63,7 +63,7 @@
                                 <p><b>Tamaño</b></p>
                             </div>
                             <div class="col-auto">
-                                <p class="customMarginInfoProduct">Grande (12cm)</p>
+                                <p class="customMarginInfoProduct">Normal</p>
                             </div>
                         </div>
                         <hr class="borderCustomHR"/>
@@ -86,7 +86,7 @@
                                 </button>
                             </div>
                             <div class="col-md-6 p-2">
-                                <button class="btn btn-block bt-customBuy rounded-pill">
+                                <button onclick="location.href = '{{route('addCar', [$producto])}}'" class="btn btn-block bt-customBuy rounded-pill">
                                     Comprar
                                 </button>
                             </div>
