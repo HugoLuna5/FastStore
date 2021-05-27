@@ -18,10 +18,13 @@ use Illuminate\Support\Facades\Route;
 Route::group(['middleware' => ['auth', 'role:admin']], function () {
     Route::prefix('admin')->group(function () {
 
-        Route::get('', 'Admin\HomeController@index');
+        Route::get('', 'Admin\HomeController@index')->name('homeAdmin');
 
 
         Route::resource('categorias', 'Admin\CategoriasController');
+        Route::resource('productos', 'Admin\ProductosController');
+        Route::resource('pedidos', 'Admin\PedidosController');
+        Route::resource('usuarios', 'Admin\UsuariosController');
 
 
     });

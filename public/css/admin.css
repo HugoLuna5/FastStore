@@ -1,0 +1,27 @@
+
+.customMarginNav{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+body {
+    background: #CEDAEF;
+}
+
+.card{
+    background: #fff;
+    margin: 20px;
+
+}
+
+.iconCustom{
+    width: 60px;
+    height: 60px;
+    font-size: 80px;
+    margin: 20px;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
