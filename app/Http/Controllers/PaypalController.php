@@ -162,13 +162,16 @@ class PaypalController extends Controller
 
     protected function saveOrder(){
         $subotal = 0;
+        $subtotalIva = 0;
         $carrito = Session::get('carrito');
 
-        $envio = 5;
+        $envio = 0;
 
         foreach ($carrito as $producto){
-            $subotal += $producto->cantidad * $producto->precio;
+            $subtotalIva += $producto->cantidad * $producto->precio;
         }
+        $iva = $subtotalIva * .16;
+        $subtotal = $subtotalIva + $iva;
 
         $order = Order::create([
           'subtotal' => $subotal,

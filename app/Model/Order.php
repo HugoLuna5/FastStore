@@ -15,11 +15,11 @@ class Order extends Model
     ];
 
     public function user(){
-        return $this->belongsTo('App\Model\User');
+        return $this->hasOne('App\User','id','user_id');
     }
 
-    public function order_items(){
-        return $this->hasMany('App\Model\OrderItem');
+    public function items(){
+        return $this->hasMany('App\Model\OrderItem','order_id','id');
     }
 
 }
