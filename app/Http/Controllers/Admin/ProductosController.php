@@ -155,7 +155,7 @@ class ProductosController extends Controller
 
             }
         }
-        return redirect()->route('productos.index')->with('mensaje', 'Es posible que el producti con este Id no exista');
+        return redirect()->route('productos.index')->with('mensaje', 'Es posible que el producto con este Id no exista');
 
     }
 }

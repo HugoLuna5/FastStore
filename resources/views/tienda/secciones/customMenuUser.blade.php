@@ -7,6 +7,13 @@
         </a>
 
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+            @if(Auth::user()->tipo == 'admin')
+                <a class="dropdown-item" onclick="location.href = '{{route('homeAdmin')}}'" href="{{route('homeAdmin')}}" >Administrador</a>
+            @endif
+
+
+
             <a class="dropdown-item" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Salir</a>
             <form id="logout-form" action="{{route('logout')}}" method="POST" style="display: none">
                 {!! csrf_field() !!}
