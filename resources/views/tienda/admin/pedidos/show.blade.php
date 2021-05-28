@@ -17,7 +17,6 @@
                         <p>Cliente: {{$pedido->user->name}}</p>
                         <p>Correo electronico: {{$pedido->user->email}}</p>
                         <p>Dirección: {{$pedido->user->direction}}</p>
-                        <p>Total: ${{$pedido->user->direction}} MXN</p>
                         <p>Fecha de pedido: {{date("Y-m-d",strtotime($pedido->created_at))}}</p>
 
                     </div>
@@ -88,7 +87,7 @@
 
                         <div class="text-right float-right">
                             <h5 style="text-align: end">Total: ${{$total}} MXN</h5>
-                            <p style="text-align: end">El costo total incluye un IVA de %16</p>
+                            <p style="text-align: end">El costo total incluye un IVA de 16%</p>
                         </div>
 
                     </div>

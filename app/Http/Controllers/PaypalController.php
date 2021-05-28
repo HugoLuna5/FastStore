@@ -161,7 +161,7 @@ class PaypalController extends Controller
     }
 
     protected function saveOrder(){
-        $subotal = 0;
+        $subtotal = 0;
         $subtotalIva = 0;
         $carrito = Session::get('carrito');
 
@@ -174,7 +174,7 @@ class PaypalController extends Controller
         $subtotal = $subtotalIva + $iva;
 
         $order = Order::create([
-          'subtotal' => $subotal,
+          'subtotal' => $subtotal,
           'envio' => $envio,
           'user_id' => Auth::user()->id
         ]);
